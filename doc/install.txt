@@ -1,0 +1,23 @@
+1. .sln Datein in Visual Studio öffnen.
+
+   - optional VS Express installieren um Solution zu öffnen: http://www.visualstudio.com/en-us/products/visual-studio-express-vs.aspx
+
+2. Wenn die Applikation lokal laufen soll, muss die Datenbank erstellt werden. Dies kann mittels 
+   Package-Manager-Console und dem Befehl Update-Database -Verbose gemacht werden. Jedoch sind nicht
+   Funktionen der Applikation ausführbar, da die Bentzeraccoundangaben für den Dienst twilio aus
+   sicherheitsgründen aus der Applikation entfernt habe. Eine vollumfängliche Version der Applikation
+   läuft unter "ardbeg.azurewebsites.net" und steht zu Testzwecken, inklusive Testdaten, bis zur 
+   bekanntmachung der Note zur Verfügung.
+
+   optional:
+   - View --> Other Windows --> Package Manager Console
+   - "Update-Database -Verbose" ausführen
+   - Applikation kann mit "F5" gestartet werden.
+
+3. Userlogin für ardbeg.azurewebsites.net
+   
+   user: user
+   pw: user123456
+
+   user admin
+   pw: admin123456
