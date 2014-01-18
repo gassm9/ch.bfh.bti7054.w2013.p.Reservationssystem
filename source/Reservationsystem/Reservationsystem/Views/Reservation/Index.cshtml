@@ -1,0 +1,54 @@
+﻿@model Reservationsystem.Models.ReservationModel
+
+@{
+    ViewBag.Title = @Html.DisplayFor(model => model.Template.NameD);
+    var i = 0;
+
+}
+
+<h2>@Model.Template.NameD</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="form-horizontal">
+
+        @foreach (var block in Model.Template.Blocks)
+        {
+            <table class="table">
+                <tr>
+                <tr>
+                    <th colspan="2">
+                        @Html.DisplayFor(b => block.NameD)
+                    </th>
+                </tr>
+                @foreach (var key in block.Keys)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(k => key.NameD)
+                        </td>
+                        <td>
+                            @switch (key.InputType.Id)
+                            {
+                                // 1 = TextBox
+                                case (1):
+                                    <input type="text" id="[@(i)].Value" name="[@(i)].Value" value="" pattern="@key.Regex" title="@key.ValidationMessageD" required />  @Html.DisplayFor(k => key.DescriptionD)
+                                    <input type="hidden" name="[@(i++)].Key" value="@key.Id" />
+                                    break;
+                                // 2 = TextArea    
+                                case (2):
+                                    break;
+                            }
+                        </td>
+                    </tr>
+                }
+            </table>
+        }
+
+        <div class="form-group">
+            <div class="col-md-offset-11 col-md-1">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}

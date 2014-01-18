@@ -1,0 +1,90 @@
+﻿@model Reservationsystem.Models.TemplateModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TemplateModel</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NameD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartSatusId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartSatusId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConfirmedStatusId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConfirmedStatusId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApprovedSatusId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApprovedSatusId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeniedStatusId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeniedStatusId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ElaboratedStatusId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ElaboratedStatusId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

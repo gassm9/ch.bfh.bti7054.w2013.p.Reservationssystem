@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Reservationsystem.Models.KeyModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UniqueName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NameD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DescriptionD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Regex)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValidationMessageD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SortOrder)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UniqueName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DescriptionD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Regex)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ValidationMessageD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SortOrder)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

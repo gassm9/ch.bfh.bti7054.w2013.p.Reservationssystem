@@ -1,0 +1,144 @@
+﻿@model Reservationsystem.Models.KeyModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>KeyModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UniqueName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UniqueName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescriptionD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescriptionD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescriptionF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescriptionF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescriptionI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescriptionI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescriptionE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescriptionE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Regex)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Regex)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValidationMessageD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValidationMessageD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValidationMessageF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValidationMessageF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValidationMessageI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValidationMessageI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValidationMessageE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValidationMessageE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SortOrder)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SortOrder)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
